@@ -8,6 +8,7 @@ import Friend from './Components/Friend'
 import FriendHandler from './Components/FriendHandler'
 import Music from './Components/Music_App/Music'
 import MusicHandler from './Components/Music_App/MusicHandler'
+import Practise from './Components/UseRef/Practise'
 
 import { useState } from 'react'
 
@@ -28,7 +29,9 @@ function App() {
 
       {/* <Music /> */}
 
-      <MusicHandler />
+      {/* <MusicHandler /> */}
+
+      <Practise />
     </>
   )
 }
