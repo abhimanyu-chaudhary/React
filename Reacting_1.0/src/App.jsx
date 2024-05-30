@@ -1,5 +1,5 @@
 import './App.css'
-import Card from './Components/Card'
+import Card from './Components/BannerCard'
 import Menu from './Components/Menu'
 import Update from './Components/Update'
 import Slider from './Components/Silder'
@@ -8,9 +8,12 @@ import Friend from './Components/Friend'
 import FriendHandler from './Components/FriendHandler'
 import Music from './Components/Music_App/Music'
 import MusicHandler from './Components/Music_App/MusicHandler'
-import Practise from './Components/UseRef/Practise'
+import Practise from './Components/FormHandling/Practise'
 
 import { useState } from 'react'
+import Main from './Components/MakeCard/Main'
+
+
 
 function App() {
 
@@ -31,7 +34,9 @@ function App() {
 
       {/* <MusicHandler /> */}
 
-      <Practise />
+      {/* <Practise /> */}
+
+      <Main />
     </>
   )
 }

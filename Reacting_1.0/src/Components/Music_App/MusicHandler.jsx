@@ -18,13 +18,13 @@ function MusicHandler(){
         setData((prev)=>{
             return prev.map((item, index)=>{
                 if(index === changingIndex) return (
-                    {...item, favourite: !item.favourite}
-                    
+                    {...item, favourite: !item.favourite} 
                 ) 
                 return item;
             })
         })
     }
+
 
     return(
         <>  

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card() { 
+function BannerCard() { 
   const data = [
         {name: "Amazon Basics", image: "https://images.unsplash.com/photo-1643208589889-faf52730d672?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Get the best amazing amazon deals available ever for you!", stock: true},
         {name: "Flipkart Deals", image: "https://images.unsplash.com/photo-1654573817889-296cad084c97?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Find your best iPhone at the most affordable price!", stock: false},
@@ -32,4 +32,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default BannerCard;
