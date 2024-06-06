@@ -13,6 +13,7 @@ import Practise from './Components/FormHandling/Practise'
 import { useState } from 'react'
 import Main from './Components/MakeCard/Main'
 import Navigation from './Components/Routing/Navigation'
+import MainPage from './Components/APIHandling/MainPage'
 
 
 
@@ -39,7 +40,9 @@ function App() {
 
       {/* <Main /> */}
 
-      <Navigation />
+      {/* <Navigation /> */}
+
+      <MainPage />
     </>
   )
 }
