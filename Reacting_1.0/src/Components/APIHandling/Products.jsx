@@ -1,14 +1,14 @@
-import axios from "axios";
-import React from "react";
+import axios from "../Utlis/AxiosHandler";
+import React from "react"; 
 import { useEffect, useState } from "react";
 
 function Products(){
     const [product, setProduct] = useState([]);
 
     const getProduct = () =>{
-        const api = "https://api.escuelajs.co/api/v1/products";
+        const api = "/products";
 
-        axios.get(api).then((product)=>{
+        axios.get("/products").then((product)=>{
             // console.log(product);
             setProduct(product.data);
         }).catch((err)=> 
