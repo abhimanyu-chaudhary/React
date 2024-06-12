@@ -1,16 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import Front from "./Front";
 import MainBody from "./MainBody";
 import Nav from "./Nav";
+import ProductPage from "./ProductPage";
 
 function Home(){
     return(
-        <div className="flex ">
-            <div className=" w-[20%] h-screen bg-zinc-300">
-                <Nav />
-            </div>
-            <div className=" w-[80%] h-screen ">
-                <MainBody />
-            </div>
-        </div>
+
+        <Routes>
+                <Route classname="w-screen" path="/" element={<MainBody /> } />
+
+                <Route path="/products/:id" element={<ProductPage />} />
+        </Routes>
+
     )
 }
 export default Home;
