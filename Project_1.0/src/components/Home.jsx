@@ -7,7 +7,7 @@ function Home(){
             <div className=" w-[20%] h-screen bg-zinc-300">
                 <Nav />
             </div>
-            <div className=" w-[80%] h-screen bg-red-300">
+            <div className=" w-[80%] h-screen ">
                 <MainBody />
             </div>
         </div>
