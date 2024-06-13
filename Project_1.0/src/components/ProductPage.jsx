@@ -31,9 +31,12 @@ function ProductPage() {
         />
       </div>
       <div className="relative flex flex-col m-0 w-[30%] items-start">
-        <h1 className="text-xl font-semibold text-center my-3">
+        <h1 className="text-xl font-semibold text-center">
           {product.title}
         </h1>
+        <h2 className="text-xs font-semibold text-center my-3">
+            {(product.category).toUpperCase()}
+        </h2>
         <p className="text-sm italic">
           {product.description}
         </p>

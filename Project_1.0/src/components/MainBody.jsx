@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Nav from "./Nav";
 import { useContext } from "react";
 import { ProductContext } from "../utils/Context";
@@ -6,6 +6,12 @@ import LoadingAnimation from "./Loading";
 
 function MainBody(){
     const [products, setProducts] = useContext(ProductContext);
+
+    const {search} = useLocation();
+    const category = decodeURIComponent(search.split("=")[1]);
+
+    console.log(category);
+
     const shortenTitle = (title) => {
         const maxLength = 40; 
         if (title.length > maxLength) {
