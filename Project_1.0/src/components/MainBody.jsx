@@ -1,23 +1,38 @@
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
-import ProductPage from "./ProductPage";
+import { useContext } from "react";
+import { ProductContext } from "../utils/Context";
+import LoadingAnimation from "./Loading";
 
 function MainBody(){
-    return(
+    const [products, setProducts] = useContext(ProductContext);
+    const shortenTitle = (title) => {
+        const maxLength = 40; 
+        if (title.length > maxLength) {
+          return title.slice(0, maxLength) + '...';
+        }
+        return title;
+      };
+    return products ? ( 
+
 
         <div className="w-screen flex ">
             <Nav className="w-[20%] " />
             <div className="w-[80%] flex flex-wrap">
-                <Link to="products/2" className="w-[210px] h-72 mx-5 pt-2 my-5 relative flex items-center flex-col border border-slate-500 rounded-md">
-                    <img className="rounded-md w-[75%] h-[80%] mb-3 " src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="" />
-                    <h1 className="w-[80%] h-[80%] font-semibold text-sm text-center">Mens Casual Premium Slim Fit T-Shirts</h1>
-                    <p className="absolute bottom-[-10px] right-[-5px] px-2 py-1.5 bg-red-500 rounded-full font-semibold">4.1</p>
-                </Link>
-
-            </div>
-        
+              {products.map((item, index)=>(
+                    <Link key={index} to={`products/${item.id}`} className="w-[210px] h-72 mx-5 pt-2 my-5 relative flex items-center flex-col justify-between border border-slate-500 rounded-md overflow-visible">
+                        <img className="rounded-md max-w-[75%] max-h-[75%] mb-3" src={item.image} alt="" />
+                        <div className="flex flex-col justify-center items-center ">
+                            <h1 className="w-[80%] h-[80%] font-semibold text-sm text-center mt-[-100px]">{shortenTitle(item.title)} </h1>
+                            <p className={`absolute bottom-[-10px] right-[-5px] px-2 py-1.5 ${item.rating.rate >= 4.0 ? "bg-green-500" : "bg-red-500"} rounded-full font-semibold`}>{item.rating.rate}</p>
+                        </div>
+                    </Link>
+               ))}             
+            </div>       
         </div>
         
+    ) : (
+        <LoadingAnimation />
     )
 }
 export default MainBody;
