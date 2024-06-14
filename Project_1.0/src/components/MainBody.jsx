@@ -1,8 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import Nav from "./Nav";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../utils/Context";
 import LoadingAnimation from "./Loading";
+import axios from "../utils/AxiosHandler";
+
 
 function MainBody(){
     const [products, setProducts] = useContext(ProductContext);
@@ -10,7 +12,24 @@ function MainBody(){
     const {search} = useLocation();
     const category = decodeURIComponent(search.split("=")[1]);
 
-    console.log(category);
+    const [filteredProduct, setFilteredProduct] = useState(null);
+
+    const getProductCategory = async () => {
+        try {
+            const {data} = await axios.get(`/products/category/${category}`);  
+            setFilteredProduct(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(()=>{
+        if(!filteredProduct) setFilteredProduct(products);
+        if (category != "undefined") getProductCategory();
+    },[category, products]);
+
+    console.log(filteredProduct);
+
 
     const shortenTitle = (title) => {
         const maxLength = 40; 
@@ -25,7 +44,7 @@ function MainBody(){
         <div className="w-screen flex ">
             <Nav className="w-[20%] " />
             <div className="w-[80%] flex flex-wrap">
-              {products.map((item, index)=>(
+              {filteredProduct && filteredProduct.map((item, index)=>(
                     <Link key={index} to={`products/${item.id}`} className="w-[210px] h-72 mx-5 pt-2 my-5 relative flex items-center flex-col justify-between border border-slate-500 rounded-md overflow-visible">
                         <img className="rounded-md max-w-[75%] max-h-[75%] mb-3" src={item.image} alt="" />
                         <div className="flex flex-col justify-center items-center ">
