@@ -15,14 +15,16 @@ function Nav(){
     },[product])
 
     let color = () => {
-        return `rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}, 1)`;
+        return `rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}, 2)`;
     }
 
     
     return(
         <>
             <div className="py-5 pl-7 bg-zinc-100">
-                    <img className="w-36 mx-10 mb-2" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Amazon_PNG6.png" alt="" />
+                    <Link to="/">
+                        <img className="w-36 mx-10 mb-2" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Amazon_PNG6.png" alt="" />
+                    </Link>
                     <button className="my-2 px-4 py-1 bg-slate-50 border border-slate-900 rounded-md">Add Product</button>
                     {uniqueCategory.map((category, index)=> (
                         <Link key={index} to={`/?category=${category}`} className=" flex items-center gap-2 mb-2" style={{ listStyleType: 'disc' }}>

@@ -24,11 +24,9 @@ function MainBody(){
     }
 
     useEffect(()=>{
-        if(!filteredProduct) setFilteredProduct(products);
+        if(!filteredProduct || "undefined") setFilteredProduct(products);
         if (category != "undefined") getProductCategory();
     },[category, products]);
-
-    console.log(filteredProduct);
 
 
     const shortenTitle = (title) => {
