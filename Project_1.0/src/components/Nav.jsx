@@ -15,7 +15,7 @@ function Nav(){
     },[product])
 
     let color = () => {
-        return `rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}, 2)`;
+        return `rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}, 10)`;
     }
 
     
