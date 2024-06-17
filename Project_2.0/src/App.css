@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Satoshi";
+    src: url("..\src\font\satoshi-variable.ttf");
+}
+
+.satoshi{
+    font-family: "Satoshi";
+}
