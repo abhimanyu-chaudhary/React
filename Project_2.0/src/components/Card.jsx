@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 function Card({width, project, text, title, matter, hover = "false"}){
     return(
-        <motion.div whileHover={{backgroundColor : hover === "true" &&  }} className={`${width} p-3 bg-zinc-800 rounded-xl min-h-[65vh] flex flex-col justify-between select-none hover:${hover} duration-500`}>
+        <motion.div whileHover={{backgroundColor : hover === "true" && "#7443FF", paddingRight: "18px" }} className={`${width} p-3 bg-zinc-800 rounded-xl min-h-[65vh] flex flex-col justify-between select-none hover:${hover}`}>
             <div className="w-full">
                 <div className="flex justify-between items-center mb-6">
                     <p>{title}</p>
