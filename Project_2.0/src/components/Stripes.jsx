@@ -11,13 +11,10 @@ function Stripes(){
         
     ]
     return(
-        <div className="max-w-screen-xl">
+        <div className="w-full">
             <div className="mb-32 flex">
                     {data.map((elem, index)=>{
-                        return  <Stripe val={elem} />
-                    })}
-                    {data.map((elem, index)=>{
-                        return  <Stripe val={elem} />
+                        return  <Stripe key={index} val={elem} />
                     })}
             </div>
         </div>
