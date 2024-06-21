@@ -17,6 +17,7 @@ function Work(){
                        return (elem.isActive) && <img className="w-60 rounded-lg absolute -translate-x-[50%] -translate-y-[50%]" style={{top: elem.top, left: elem.left}} src={elem.url}  alt="" />
                     })}
                 </div>
+                <p className="text-zinc-500 pb-24 text-base">Web Design, Webflow Development, Creative Development</p>
             </div>
         </div>
     )
