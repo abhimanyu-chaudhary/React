@@ -4,7 +4,7 @@ function Footer(){
             <div className="max-w-screen-xl mx-auto flex justify-between">
                 <div className="flex text-sm gap-8 text-zinc-500">
                     {["Privacy Policy", "Cookie Policy", "Impressum", "Terms", "Webflow Agency"].map((item, index)=>{
-                        return <a className="" href="#">{item}</a>
+                        return <a key={index} className="" href="#">{item}</a>
                     })}
                 </div>
                 <div>

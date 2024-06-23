@@ -54,26 +54,26 @@ function Work(){
         }
 
 
-        switch (Math.floor(data * 100)) {
+        switch (Math.floor(data * 1000)) {
           case 0:
             showImages([]);
             break;
-          case 1:
+          case 10:
             showImages([0]);
             break;
-          case 2:
+          case 20:
             showImages([0, 1]);
             break;
-          case 3:
+          case 25:
             showImages([0, 1, 2]);
             break;
-          case 4:
+          case 30:
             showImages([0, 1, 2, 3]);
             break;
-          case 5:
+          case 35:
             showImages([0, 1, 2, 3, 4]);
             break;
-          case 6:
+          case 40:
             showImages([0, 1, 2, 3, 4, 5]);
             break;
         }
@@ -81,8 +81,8 @@ function Work(){
 
     return(
         <div className="w-full">
-            <div className="relative max-w-screen-xl mx-auto text-center font-medium">
-                <h1 className="text-[40vw] select-none leading-none">work</h1>
+            <div className="relative max-w-screen-xl mx-auto text-center font-medium pointer-events-none">
+                <h1 className="text-[40vw] pt-16 select-none leading-none pointer-events-none ">work</h1>
                 <div className="absolute top-0 left-0 w-full h-full">
                     {images.map((elem, index)=>{
                        return (elem.isActive) && <img className="w-72 rounded-lg absolute -translate-x-[50%] -translate-y-[50%]" style={{top: elem.top, left: elem.left}} src={elem.url}  alt="" />

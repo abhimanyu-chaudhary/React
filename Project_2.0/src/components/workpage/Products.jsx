@@ -177,7 +177,7 @@ function Products(){
     return (
       <div className="w-full relative">
         {data.map((elem, index) => {
-          return <Product val={elem} mover={mover} count={index} />;
+          return <Product key={index} val={elem} mover={mover} count={index} />;
         })}
         <div className="absolute w-full h-full top-0 pointer-events-none">
           <motion.div
@@ -188,7 +188,7 @@ function Products(){
           >
             {data.map((elem, index) => {
               return (
-                <motion.div
+                <motion.div key={index}
                   animate={{ y: -pos + `rem` }}
                   transition={{ ease: [0.25, 1, 0.5, 1], duration: 0.3 }}
                   className="w-full h-full"
