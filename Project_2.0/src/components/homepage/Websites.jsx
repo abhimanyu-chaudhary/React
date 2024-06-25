@@ -71,7 +71,7 @@ function Websites(){
     ];
 
     return(
-        <div className="flex flex-col gap-10 mt-40">
+        <div className="flex flex-col gap-10 mt-40 pb-40">
             {data.map((elem, index) => {
                 return  <Website key={index} val={elem} />
             })}

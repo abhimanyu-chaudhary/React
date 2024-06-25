@@ -1,7 +1,11 @@
 import Marquees from "../workpage/Marquees";
+import Stripes from "../workpage/Stripes";
 import "./../../App.css";
 import Front from "./Front";
 import Websites from "./Websites";
+import Banners from "./Banners";
+import Forwards from "./Forwards";
+import HomeCards from "./HomeCards";
 
 function HomePage(){
     return(
@@ -9,6 +13,10 @@ function HomePage(){
             <Front />
             <Marquees />
             <Websites />
+            <Stripes />
+            <Banners />
+            <Forwards />
+            <HomeCards />
         </div>
     )
 }

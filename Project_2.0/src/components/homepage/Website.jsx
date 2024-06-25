@@ -2,7 +2,7 @@ import Button from "./../workpage/Button";
 
 function Website({val}){
     return(
-        <div className={`max-w-screen-xl mx-auto p-6 ${val.color && "val.color"} rounded-2xl flex gap-5`}>
+        <div style={{backgroundColor: val.color}} className="max-w-screen-xl mx-auto p-6 rounded-2xl flex gap-5">
             <div className="w-1/2 flex flex-col gap-5">
                 <h1 className="text-3xl font-semibold leading-loose mb-7">{val.title}</h1>
                 <img className="rounded-2xl w-[22rem] self-end" src={val.img1} alt="" />
