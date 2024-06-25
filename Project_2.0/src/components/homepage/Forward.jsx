@@ -4,9 +4,9 @@ function Forward({val}){
     return(
         <div className="max-w-screen-xl mx-auto flex ">
             <div className="w-1/2 flex flex-col">
-                <div className="mt-[-6rem] ">
+                <div className="mt-[-6rem] z-10 ">
                     <h1 className="text-[10rem] font-medium ">{val.title}</h1>
-                    <h1 className="text-[10rem] font-medium mt-[-6rem] ml-24 z-10 ">{val.subtitle}</h1>
+                    <h1 className="text-[10rem] font-medium mt-[-6rem] ml-24">{val.subtitle}</h1>
                 </div>
                 <p className="text-lg ml-[5rem] w-[25vw] font-normal mb-10">{val.text}</p>
                 <span className="ml-[5rem] font-semibold"><Button title="News & Insights"/></span>

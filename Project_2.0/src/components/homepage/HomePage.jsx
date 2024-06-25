@@ -6,6 +6,7 @@ import Websites from "./Websites";
 import Banners from "./Banners";
 import Forwards from "./Forwards";
 import HomeCards from "./HomeCards";
+import Testimonials from "./Testimonials";
 
 function HomePage(){
     return(
@@ -17,6 +18,7 @@ function HomePage(){
             <Banners />
             <Forwards />
             <HomeCards />
+            <Testimonials />
         </div>
     )
 }
