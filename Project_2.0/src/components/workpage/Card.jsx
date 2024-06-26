@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-function Card({width, project, text, title, matter, hover = "false"}){
+function Card({width, project, text, title, matter, texts, hover = "false"}){
     return(
         <motion.div whileHover={{backgroundColor : hover === "true" ? "#7443FF" : "#3E3E46", paddingRight: "15px", paddingLeft: "15px"}} className={`${width} p-3 bg-zinc-800 rounded-xl min-h-[65vh] flex flex-col justify-between select-none hover:${hover}`}>
             <div className="w-full">
@@ -19,7 +19,7 @@ function Card({width, project, text, title, matter, hover = "false"}){
                         <button className="px-5 py-2 border rounded-full">Contact us</button>
                     </>      
                 }
-                {text && <p className="text-slate-400">Explore what drives our team.</p>}
+                {text && <p className="text-slate-300 w-48 text-sm">{texts}</p>}
             </div>
         </motion.div>
     )

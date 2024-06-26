@@ -1,5 +1,6 @@
 import Marquees from "../workpage/Marquees";
 import Stripes from "../workpage/Stripes";
+import Footer from "../workpage/Footer";
 import "./../../App.css";
 import Front from "./Front";
 import Websites from "./Websites";
@@ -7,6 +8,7 @@ import Banners from "./Banners";
 import Forwards from "./Forwards";
 import HomeCards from "./HomeCards";
 import Testimonials from "./Testimonials";
+import Cards from "../workpage/Cards";
 
 function HomePage(){
     return(
@@ -19,6 +21,8 @@ function HomePage(){
             <Forwards />
             <HomeCards />
             <Testimonials />
+            <Cards title="Up Next: Project" matter="Projects & Case Studies" texts="Web Design, Webflow Development, and Creative Development" />
+            <Footer />
         </div>
     )
 }

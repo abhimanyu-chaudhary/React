@@ -66,7 +66,7 @@ function Testimonials(){
     }
 
     return (
-      <div className="py-24 flex justify-center items-center gap-3">
+      <div className="pt-24 flex justify-center items-center gap-3">
         <div>
           <div className="flex flex-col gap-2">
             {data.map(( _, index) => (
