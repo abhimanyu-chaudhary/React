@@ -36,13 +36,13 @@ function App() {
 
       {/* <MusicHandler /> */}
 
-      {/* <Practise /> */}
+      <Practise />
 
       {/* <Main /> */}
 
       {/* <Navigation /> */}
 
-      <MainPage />
+      {/* <MainPage /> */}
     </>
   )
 }
