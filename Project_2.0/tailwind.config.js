@@ -7,6 +7,9 @@ export default {
         "extra-tight": ".85",
         "ultra-tight": ".5",
       },
+      boxShadow: {
+        'custom-green': '0 0 0.25em #00FF19',
+      },
     },
     plugins: [],
   },
