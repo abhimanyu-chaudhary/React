@@ -23,23 +23,23 @@ function Routing(){
                 alt=""
                 /> </Link>
                 <div className="flex gap-14 ">
-                {[
-                    { title: "Home", sign: "/" },
-                    { title: "Work", sign: "/work" },
-                    { title: "About", sign: "/about" },
-                    { title: "News", sign: "/news" },
-                    { title: "Careers", sign: "/careers" },
-                ].map((elem, index) => {
-                  const isActive = location.pathname === elem.sign;
-                    return (
-                    <div className='flex items-center relative gap-1'> 
-                      {isActive && <div className='w-1 h-1 bg-[#00ff19] rounded-full  shadow-custom-green'></div>}
-                      <Link to={elem.sign} key={index} className="text-sm">
-                        {elem.title}
-                      </Link>
-                    </div>
-                    );
-                })}
+                  {[
+                      { title: "Home", sign: "/" },
+                      { title: "Work", sign: "/work" },
+                      { title: "About", sign: "/about" },
+                      { title: "News", sign: "/news" },
+                      { title: "Careers", sign: "/careers" },
+                  ].map((elem, index) => {
+                    const isActive = location.pathname === elem.sign;
+                      return (
+                      <div className='flex items-center relative gap-1'> 
+                        {isActive && <div className='w-1 h-1 bg-[#00ff19] rounded-full  shadow-custom-green'></div>}
+                        <Link to={elem.sign} key={index} className="text-sm">
+                          {elem.title}
+                        </Link>
+                      </div>
+                      );
+                  })}
                 </div>
             </div>
 
