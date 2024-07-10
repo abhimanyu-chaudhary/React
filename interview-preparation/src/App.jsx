@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [accData, setAccData] = useState([
+    {
+      id: 1,
+      header: "Are you 18+?",
+      desc: "Only the 18+ people are allowed to join this program",
+      toggle: false,
+    },
+    {
+      id: 2,
+      header: "Have you qualified the test exam?",
+      desc: "At least B+ ranking is needed.",
+      toggle: false,
+    },
+    {
+      id: 1,
+      header: "Are you day scholar",
+      desc: "Only day scholar is eligible.",
+      toggle: true,
+    },
+  ]);
+
+  const [expand, setExpand] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="max-w-screen-md mx-auto mt-20 flex flex-col gap-5">
+      {accData.map((acc) => {
+        return (
+          <>
+            <div
+              className="w-[30rem] px-5 py-4 border-2"
+              onClick={() => acc.toggle(!(acc.toggle))}
+            >
+              {acc.header} 
+            </div>
+            <span className={acc.toggle && ` w-[30rem] p-5 bg-slate-300`}>
+              {acc.toggle && acc.desc}
+            </span>
+          </>
+        );
+      })}
+    </div>
+  );
 }
 
-export default App
+export default App;
