@@ -16,14 +16,20 @@ function App() {
       toggle: false,
     },
     {
-      id: 1,
+      id: 3,
       header: "Are you day scholar",
       desc: "Only day scholar is eligible.",
-      toggle: true,
+      toggle: false,
     },
   ]);
 
-  const [expand, setExpand] = useState(false);
+  const toggleAccordion = (id) => {
+    setAccData((prev) => 
+      prev.map((acc) => 
+          acc.id === id ? {...acc, toggle: !acc.toggle} : {...acc, toggle: false}
+      )
+    )
+  }
 
   return (
     <div className="max-w-screen-md mx-auto mt-20 flex flex-col gap-5">
@@ -32,9 +38,9 @@ function App() {
           <>
             <div
               className="w-[30rem] px-5 py-4 border-2"
-              onClick={() => acc.toggle(!(acc.toggle))}
+              onClick={() => toggleAccordion(acc.id) }
             >
-              {acc.header} 
+              {acc.id}. {acc.header} 
             </div>
             <span className={acc.toggle && ` w-[30rem] p-5 bg-slate-300`}>
               {acc.toggle && acc.desc}
