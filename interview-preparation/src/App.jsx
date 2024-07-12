@@ -2,12 +2,14 @@ import "./App.css";
 import Accordion from "./components/Accordion";
 import Counter from "./components/Counter";
 import Input from "./components/Input";
+import List from "./components/List";
 
 function App() {
   return(
     // <Accordion />
     // <Counter />
-    <Input />
+    // <Input />
+    <List />
   )
 }
 
