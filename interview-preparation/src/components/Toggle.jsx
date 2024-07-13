@@ -6,13 +6,13 @@ function Toggle() {
   const [state, setState] = useState(true);
   return (
     <div
-      className="text-[15rem] cursor-pointer flex items-center justify-center"
+      className="text-[15rem] w-[15rem] mx-auto cursor-pointer flex items-center justify-center"
       onClick={() => setState(!state)}
     >
       {state ? (
-        <MdOutlineToggleOff className="" />
+        <MdOutlineToggleOff className={`state && "text-green-500`} />
       ) : (
-        <MdOutlineToggleOn className="" />
+        <MdOutlineToggleOn className="text-red-500" />
       )}
     </div>
   );
