@@ -10,9 +10,9 @@ function Toggle() {
       onClick={() => setState(!state)}
     >
       {state ? (
-        <MdOutlineToggleOff className={`state && "text-green-500`} />
+        <MdOutlineToggleOff className="text-blue-00" />
       ) : (
-        <MdOutlineToggleOn className="text-red-500" />
+        <MdOutlineToggleOn className="text-red-200" />
       )}
     </div>
   );
