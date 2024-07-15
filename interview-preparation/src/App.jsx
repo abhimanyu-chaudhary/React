@@ -1,5 +1,6 @@
 import "./App.css";
 import Accordion from "./components/Accordion";
+import Background from "./components/Background";
 import Counter from "./components/Counter";
 import Input from "./components/Input";
 import List from "./components/List";
@@ -11,8 +12,10 @@ function App() {
     // <Counter />
     // <Input />
     // <List />
-    <Toggle />
-  )
+    // <Toggle />
+    <Background />
+
+  );
 }
 
 export default App;
