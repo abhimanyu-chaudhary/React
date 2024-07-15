@@ -1,6 +1,9 @@
 import React from 'react'
 
 function Background() {
+    const colorHandler = () => {
+        switch 
+    }
   return (
     <div className='max-w-screen-lg mx-auto flex justify-center gap-4 mt-[50vh] -translate-y-[50%]'>
       <button className='px-3 py-2 rounded-lg border-2 min-w-20'>Red</button>
