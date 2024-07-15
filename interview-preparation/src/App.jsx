@@ -4,6 +4,7 @@ import Background from "./components/Background";
 import Counter from "./components/Counter";
 import Input from "./components/Input";
 import List from "./components/List";
+import Timer from "./components/Timer";
 import Toggle from "./components/Toggle";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     // <Input />
     // <List />
     // <Toggle />
-    <Background />
+    // <Background />
+    <Timer />
 
   );
 }
