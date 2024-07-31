@@ -17,7 +17,7 @@ function App() {
       {/* <List /> */}
       {/* <Toggle /> */}
       {/* <Background /> */}
-      {/* <Timer /> */}
+      <Timer />
       {/* <Fetch /> */}
     </div>
   );
