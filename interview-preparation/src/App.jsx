@@ -5,6 +5,7 @@ import Counter from "./components/Counter";
 import Fetch from "./components/FetchAPI";
 import Input from "./components/Input";
 import List from "./components/List";
+import RandomQuotes from "./components/RandomQuotes";
 import Timer from "./components/Timer";
 import Toggle from "./components/Toggle";
 
@@ -17,8 +18,9 @@ function App() {
       {/* <List /> */}
       {/* <Toggle /> */}
       {/* <Background /> */}
-      <Timer />
+      {/* <Timer /> */}
       {/* <Fetch /> */}
+      <RandomQuotes />
     </div>
   );
 }
