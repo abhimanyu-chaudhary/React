@@ -3,6 +3,7 @@ import Accordion from "./components/Accordion";
 import Background from "./components/Background";
 import Counter from "./components/Counter";
 import Fetch from "./components/FetchAPI";
+import FileUploader from "./components/FileUploader";
 import Input from "./components/Input";
 import List from "./components/List";
 import RandomQuotes from "./components/RandomQuotes";
@@ -20,7 +21,8 @@ function App() {
       {/* <Background /> */}
       {/* <Timer /> */}
       {/* <Fetch /> */}
-      <RandomQuotes />
+      {/* <RandomQuotes /> */}
+      <FileUploader />
     </div>
   );
 }
