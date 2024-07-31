@@ -31,7 +31,7 @@ function Background() {
     }
   };
   return (
-    <div className={`w-screen h-screen ${backColor}`}>
+    <div className={`w-screen h-screen ${backColor} font-semibold`}>
       <div className="max-w-screen-lg mx-auto flex justify-center gap-4 pt-[50vh]">
         <button
           className="px-3 py-2 rounded-lg border-2 min-w-20"
