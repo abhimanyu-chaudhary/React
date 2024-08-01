@@ -22,6 +22,7 @@ function Login() {
         setUsers([...users, newUser]);
         localStorage.setItem('users', JSON.stringify([...users, newUser]));
         setIsLoggedIn(true);
+        console.log(users);
     }
   }
 
