@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import RandomQuotes from "./components/RandomQuotes";
 import Timer from "./components/Timer";
 import Toggle from "./components/Toggle";
+import Weather from "./components/Weather";
 
 function App() {
   return(
@@ -24,7 +25,8 @@ function App() {
       {/* <Fetch /> */}
       {/* <RandomQuotes /> */}
       {/* <FileUploader /> */}
-      <Login />
+      {/* <Login /> */}
+      <Weather />
     </div>
   );
 }
