@@ -26,7 +26,8 @@ function App() {
       {/* <RandomQuotes /> */}
       {/* <FileUploader /> */}
       {/* <Login /> */}
-      <Weather />
+      {/* <Weather /> */}
+      
     </div>
   );
 }
