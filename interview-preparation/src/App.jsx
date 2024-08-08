@@ -5,6 +5,7 @@ import ColorPicker from "./components/ColorPicker";
 import Counter from "./components/Counter";
 import Fetch from "./components/FetchAPI";
 import FileUploader from "./components/FileUploader";
+import ImageExpand from "./components/ImageExpand";
 import Input from "./components/Input";
 import List from "./components/List";
 import Login from "./components/Login";
@@ -32,7 +33,8 @@ function App() {
       {/* <Weather /> */}
       {/* <SearchItem /> */}
       {/* <ColorPicker /> */}
-      <Menu />
+      {/* <Menu /> */}
+      <ImageExpand />
     </div>
   );
 }
