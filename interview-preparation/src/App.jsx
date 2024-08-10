@@ -12,6 +12,7 @@ import Login from "./components/Login";
 import Menu from "./components/Menu";
 import RandomQuotes from "./components/RandomQuotes";
 import SearchItem from "./components/SearchItem";
+import SocialMedia from "./components/SocialMedia";
 import Timer from "./components/Timer";
 import Toggle from "./components/Toggle";
 import Weather from "./components/Weather";
@@ -34,7 +35,8 @@ function App() {
       {/* <SearchItem /> */}
       {/* <ColorPicker /> */}
       {/* <Menu /> */}
-      <ImageExpand />
+      {/* <ImageExpand /> */}
+      <SocialMedia />
     </div>
   );
 }
