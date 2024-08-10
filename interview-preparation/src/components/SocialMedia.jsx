@@ -3,8 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 
 function SocialMedia() {
   return (
-    <div>
-      <h1>ABHIMANYU CHAUDHARY</h1>
+    <div className='text-8xl font-extrabold'>
+      <h1 className='font-extrabold'>ABHIMANYU CHAUDHARY</h1>
     </div>
   )
 }
